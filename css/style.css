@@ -292,6 +292,16 @@ aside.anuncios img {
     gap: 40px;
     align-items: center;
     padding: 30px;
+    scrollbar-width: none;
+    position: relative;
+  }
+  .sidenav .menu-secundario:after {
+    content: "→";
+    color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 3px;
+    right: 30px;
+    animation: seta 0.5s ease-in 0s infinite alternate;
   }
   .menu-secundario a {
     margin-bottom: 0;
@@ -323,5 +333,16 @@ aside.anuncios img {
   }
   .row-3 {
     grid-row: auto;
+  }
+}
+
+@keyframes seta {
+  0% {
+    right: 30px;
+  }
+}
+@keyframes seta {
+  100% {
+    right: 20px;
   }
 }
